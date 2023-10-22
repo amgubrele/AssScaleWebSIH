@@ -153,7 +153,9 @@ body
 .login-btn:hover{
     background-color:rgba(59, 68, 65, 0.2) ;
 }
-/*section one*/
+
+/*section one--------------------------------------------------------------------------praut can start from here---*/ 
+
 .section1{
     height: 90vh;
     width: 100%;
