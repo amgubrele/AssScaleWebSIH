@@ -16,6 +16,7 @@ const loginCredentials = require('./datajs/users.js')
 app.use(express.static('./home-page'))
 app.use(express.static('./login-page'))
 app.use(express.urlencoded({extended:false}))
+app.use(express.json()) //middle ware to prase incomming post req  from frontednd js
 app.listen(5000 ,()=>{
     console.log("listening on port 5000...")
 })
@@ -29,7 +30,18 @@ app.get('/login-page',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./login-page/loginIndex.html'))
     
 })
+app.get('/users',(req,res)=>{
+    res.json({success:true,data:users})
+})
 
+//to recivew data from frontend of login page
+app.post('/users',(req,res)=>{
+    console.log('done')
+    const {userId}=req.body
+    console.log(userId)
+    res.json({success:true})
+   
+})
 
 //login middle ware code
 app.post('/login',(req,res)=>{

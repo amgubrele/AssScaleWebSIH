@@ -10,15 +10,18 @@
 
 <body>
     <div class="container">
-        <form action="/login" method="post">
+        <form >
             <div class="main">
-                <input type="text" name="userId" placeholder="Username" autocomplete="false" class="user">
-                
-                <input type="password" name="password" placeholder="Password" class="user">
-                <button type="submit">Login</button>
+                <input type="text" name="userId" placeholder="Username" autocomplete="false" class="user userId">
+                <input type="password" name="password" placeholder="Password" class="user userPassword">
+                <button type="submit" class="btn">Login</button>
+                <div class="result"></div>
             </div>
         </form>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="loginPage.js"></script>
 </body>
 
 </html>

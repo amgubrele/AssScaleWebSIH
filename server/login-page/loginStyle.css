@@ -38,7 +38,13 @@ button{
     color: white;
    width: 220px;
    height: 50px;
+   font-size: 1.1em;
 }
 button:hover{
     background-color: rgba(0, 0, 255, 0.815);
+}
+.result
+{
+    margin-top: 20px;
+    color: red;
 }
