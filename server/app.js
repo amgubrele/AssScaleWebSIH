@@ -35,31 +35,33 @@ app.get('/users',(req,res)=>{
 })
 
 //to recivew data from frontend of login page
-app.post('/users',(req,res)=>{
-    console.log('done')
-    const {userId}=req.body
-    console.log(userId)
-    res.json({success:true})
+// app.post('/users',(req,res)=>{
+//     console.log('done')
+//     const {userId}=req.body
+//     console.log(userId)
+//     res.json({success:true})
    
-})
+// })
 
 //login middle ware code
-app.post('/login',(req,res)=>{
-    const{userId,password}=req.body
-    const liveUser={userId,password}
-    console.log(req.body)
-    console.log(loginCredentials[0])
-    const user=loginCredentials.find((loginCredentials)=>(loginCredentials.userId===liveUser.userId && loginCredentials.password===liveUser.password))
-    if(!userId)
-    {
-        return res.send('please provide userid and pass.')
+app.post('/users', (req, res) => {
+    const { userId, password } = req.body;
+    const liveUser = { userId, password };
+    console.log(req.body);
+    console.log(loginCredentials[0]);
+    const user = loginCredentials.find((loginCredentials) => (loginCredentials.userId === liveUser.userId && loginCredentials.password === liveUser.password));
+    console.log(user);
+
+    if (!userId) {
+        return res.json({ success: false , empty:true});
+    } else if (!user) {
+        console.log('not');
+        return res.json({ success: false ,empty:false});
     }
-    else if(!user)
-    {
-        return res.send('no user found')
-    }
-    return res.send(`welcome ${userId}`)
+
+    return res.json({ success: true ,empty:false});
 })
+
 app.get('/books/:nameid',(req,res)=>{                                   //search for a particular book by name
     console.log(req.params)
     const singlebook=book.find((book)=>book.name===String(req.params.nameid))

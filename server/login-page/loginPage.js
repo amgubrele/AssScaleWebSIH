@@ -25,34 +25,43 @@ const inputForUserPassword=document.querySelector('.userPassword')
 const error=document.querySelector('.result')
 
 
+
+
+
+//checking if user exist and error handling
 btn.addEventListener('click',async(e)=>{
     e.preventDefault()
+
     
     const nameValue=inputForUserId.value
     const passwordValue=inputForUserPassword.value
-
-    if(nameValue=="" || passwordValue=="")
-    {
-        console.log('form is empty')
-        error.innerHTML=`please provide Credentials`
-        // const h5=document.createElement('h5')
-        // result.appendChild(h5)
-        // const msg=document.createTextNode('Please provide Credentials')
-        // h5.appendChild(msg)
-    }
-
-
+         
     try{
-        const {data}=await axios.post('/users',{userId:nameValue, Password:passwordValue})
+        const {data}=await axios.post('/users',{userId:nameValue, password:passwordValue})
         const h5=document.createElement('h5')
+        console.log(data.success)
+        if(data.success==false && data.empty==false)
+        {
+            error.innerHTML=`incorrect user or Password`
+        }
+        else if(data.success==false &&  data.empty==true)
+        {
+            error.innerHTML=`please provide credentials`
+        }
+        else
+        {
+            error.innerHTML=``
+        }
         // h5.textContent=data.person
         // result.appendChild(h5)
-           inputForUserId.value=""
-           inputForUserPassword.value=""
+           
     }
     catch(error)
     {
         console.error('Error:', error);
     }
+
+    inputForUserId.value=""
+    inputForUserPassword.value=""
 
 })
