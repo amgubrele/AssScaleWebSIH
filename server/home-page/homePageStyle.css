@@ -22,7 +22,7 @@ body
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e7f5ff;
+    /* background-color: #e7f5ff; */
 
 }
 
@@ -154,16 +154,9 @@ body
     background-color:rgba(59, 68, 65, 0.2) ;
 }
 
-/*section one--------------------------------------------------------------------------praut can start from here---*/ 
 
-.section1{
-    height: 90vh;
-    width: 100%;
-    background: linear-gradient(rgb(100, 191, 189),rgb(60, 60, 72));
-    
-}
 .nav-bar ul li {font-family: 'Open Sans', sans-serif;}
-/* section2 */
+
 #searchbar{
 align-items: center;
     margin-left: 50%;
@@ -173,3 +166,87 @@ align-items: center;
 /* margin-bottom: 30px; */
 
 }
+
+
+/* section 1 */
+
+.section1 {
+  
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1 img {
+    height: 100%;
+    width: 100%;
+  }
+  .section #hero {
+    width: 90%;
+    height: 90%;
+  }
+  .section1 #hero #right {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 40%;
+    height: 65%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.164);
+  }
+  .section1 #hero #left {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 35%;
+    height: 60%;
+  }
+  
+  #hero h1 {
+    font-size: 4vw;
+    font-weight: 100;
+    padding-bottom: 30px;
+  }
+  #hero p {
+    font-size: 22px;
+  }
+  #hero #left button {
+    margin: 3vw 0;
+    /* padding: 10px 15px 10px 15px; */
+    padding: 15px;
+    background-color: rgb(81, 198, 228);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: 600;
+  }
+  
+  #right #elem {
+    margin: 15px 0 10px 20px;
+    line-height: 2;
+  }
+  #right #elem input {
+    padding: 15px;
+    width: 80%;
+    border: 1px solid rgba(128, 128, 128, 0.575);
+  }
+  #right #elem #category {
+    padding: 15px;
+    width: 87%;
+    border: 1px solid rgba(128, 128, 128, 0.575);
+  }
+  #right #elem h3 {
+    font-size: 15px;
+  }
+  #right button {
+    margin: 15px 0 10px 20px;
+    width: 85%;
+    padding: 15px;
+    background-color: rgb(81, 198, 228);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: 600;
+  }
+  
+  

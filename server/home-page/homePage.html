@@ -39,19 +39,45 @@
      <!--praut can start from here----------------------------------------------------  -->
 
 
-    <div class="section1">
-        
-       
+     <div class="section1" id="section1">
+        <img src="bg-image.png" alt="">
 
-    </div>
-    <div class="section2">
-        <div>
-            
-            
-                
-            </form>
+        <div id="hero">
+            <div id="left">
+                <h1><strong>8248</strong> Used Books On Sale</h1>
+                <p>Buy And Sell Used Books In India. Search And Buy Second Hand Books Near You. Post Free Ad To Sell
+                    Old Books In City. Download the app now.</p>
+                <button>SELL USED BOOKS</button>
+            </div>
+
+            <div id="right">
+                <form action="https://httpbin.org/get" method="get">
+                    <div id="elem">
+                        <h3>Title</h3>
+                        <input type="text" name="firstName" placeholder="What are you looking for...">
+                    </div>
+
+                    <div id="elem">
+                        <h3>Author's Name</h3>
+                        <input type="text" name="Author" placeholder="Name">
+                    </div>
+
+                    <div id="elem">
+                        <h3>Select Category</h3>
+                        <select name="character" id="category">
+                            <option value="none" selected>None</option>
+                            <option value="john wick">Ayurveda</option>
+                            <option value="walter white">Siddha</option>
+                            <option value="saul">Unani</option>
+                        </select>
+                    </div>
+
+                    <button>SEARCH</button>
+            </div>
+
         </div>
     </div>
+</div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="logic.js"></script>
