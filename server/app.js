@@ -5,6 +5,7 @@ const app=express()
 const book=require('./datajs/books.js')
 const users=require('./datajs/users.js')
 const loginCredentials = require('./datajs/users.js')
+let CcurrentUser="user";
 
 
 //global var
@@ -26,6 +27,9 @@ app.listen(5000 ,()=>{
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./home-page/homePage.html'))
 })
+app.post('/yoo',(req,res)=>{
+    res.send({j:"j"})
+})
 app.get('/login-page',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./login-page/loginIndex.html'))
     
@@ -33,6 +37,17 @@ app.get('/login-page',(req,res)=>{
 app.get('/users',(req,res)=>{
     res.json({success:true,data:users})
 })
+
+app.post('/homeUser',(req,res)=>{
+    const {a}=req.body
+    const currentUser=CcurrentUser
+    CcurrentUser="user"
+    return res.json({currentUser})
+    
+})
+// app.post('/users',(req,res)=>{
+//     res.json({success:true})
+// })
 
 //to recivew data from frontend of login page
 // app.post('/users',(req,res)=>{
@@ -59,6 +74,8 @@ app.post('/users', (req, res) => {
         return res.json({ success: false ,empty:false});
     }
 
+    CcurrentUser=userId
+
     return res.json({ success: true ,empty:false});
 })
 
@@ -71,6 +88,14 @@ app.get('/books/:nameid',(req,res)=>{                                   //search
         
     }
     return res.json(singlebook)
+})
+
+//put method to update data
+app.put('/book/add/:nameid',(req,res)=>{
+    const {id}=req.params
+    const {name}=req.body
+    console.log(id,name);
+    res.send('hello')
 })
 
 

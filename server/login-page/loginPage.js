@@ -50,7 +50,9 @@ btn.addEventListener('click',async(e)=>{
         }
         else
         {
+            window.location.href = '/';
             error.innerHTML=``
+            btn.action='/'
         }
         // h5.textContent=data.person
         // result.appendChild(h5)
