@@ -14,24 +14,24 @@ let CcurrentUser="user";
 //static files for css and logic js
 
 
-app.use(express.static('./home-page'))
-app.use(express.static('./login-page'))
+app.use(express.static('./frontendFiles/home-page'))
+app.use(express.static('./frontendFiles/login-page'))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json()) //middle ware to prase incomming post req  from frontednd js
 app.listen(5000 ,()=>{
     console.log("listening on port 5000...")
 })
 
-// frontend serving functions
+// http req
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./home-page/homePage.html'))
+    res.sendFile(path.resolve(__dirname,'./frontendFiles/home-page/homePage.html'))
 })
 app.post('/yoo',(req,res)=>{
     res.send({j:"j"})
 })
 app.get('/login-page',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./login-page/loginIndex.html'))
+    res.sendFile(path.resolve(__dirname,'./frontendFiles/login-page/loginIndex.html'))
     
 })
 app.get('/users',(req,res)=>{
