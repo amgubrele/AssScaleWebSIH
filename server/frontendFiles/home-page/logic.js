@@ -5,6 +5,16 @@ const nav_header=document.querySelector(".head");
 const action=document.querySelector(".login-btn")
 let f=1;
 
+//for serch book 
+const searchBtn=document.querySelector(".searchBtn")
+
+searchBtn.addEventListener('click',()=>clicklisten())
+
+const clicklisten=()=>{
+    console.log('clicked')
+}
+
+
 const toggleNavbar=()=>{
     nav_header.classList.toggle('active')
     if(f==1)
@@ -28,7 +38,7 @@ mobile_nav.addEventListener('click',()=>toggleNavbar())
 
 const fun = async () => {
     try {
-        const response = await axios.post('/homeUser', { user: "hello" });
+        const response = await axios.post('/login/home/user', { user: "hello" });
         const { currentUser } = response.data;
         console.log(currentUser);
 
@@ -44,3 +54,5 @@ const fun = async () => {
     }
 };
 fun()
+
+
