@@ -1,15 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200&family=Quicksand:wght@300&family=Rubik+Gemstones&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
+
 img {
   width: 50px;
 }
 
-html,body{
-  font-family: sans-serif;
+/* html{
+    overflow-x: hidden;
 }
+body
+{
+    overflow-x: hidden;
+} */
 
 .head {
   padding: 0px 48px;
@@ -17,7 +35,7 @@ html,body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #e7f5ff; */
+  border-bottom: 1px solid black;
 }
 
 .head .logo {
@@ -78,7 +96,7 @@ html,body{
     /* display: none; */
     width: 100%;
     height: 100vh;
-    background-color: #e7f5ff;
+    background-color: #aac8dd;
     position: absolute;
     top: 0;
     left: 0;
@@ -132,136 +150,64 @@ html,body{
   font-family: "Open Sans", sans-serif;
 }
 
-#searchbar {
-  align-items: center;
-  margin-left: 50%;
-  border-radius: 15px;
-  border-color: black;
-  justify-content: center;
-  /* margin-bottom: 30px; */
-}
-
-/* section 1 */
-
-.section1 {
-  height: 90vh;
-  width: 100%;
+#content{
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.section1 img {
-  height: 100%;
-  width: 100%;
-}
-.section #hero {
-  width: 90%;
-  height: 90%;
-}
-.section1 #hero #right {
-  position: absolute;
-  top: 25%;
-  left: 50%;
+
+#left{
+  margin-left: 3vw;
   width: 40%;
-  height: 65%;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.164);
 }
-.section1 #hero #left {
-  position: absolute;
-  top: 25%;
-  left: 10%;
-  width: 35%;
-  height: 60%;
+#left img{
+  height: 35vw;
+  width: 30vw;
+  max-height: 1000px;
+  margin: 50px 20px 0px 0px;
+  box-shadow: 8px 10px 10px rgba(0,0,0,0.4);
+  transition: all ease 0.3s;
 }
-
-#hero h1 {
-  font-size: 4vw;
-  font-weight: 100;
-  padding-bottom: 30px;
+#left img:hover{
+  height: 37vw;
+  width: 32vw;
 }
-#hero p {
-  font-size: 22px;
-}
-#hero #left button {
-  margin: 3vw 0;
-  /* padding: 10px 15px 10px 15px; */
-  padding: 15px;
-  background-color: rgb(81, 198, 228);
-  color: rgb(0, 0, 0);
-  border: none;
-  font-weight: 600;
+@media (min-width:1200px){
+  #left img{
+    height: 450px;
+    width: 400px;
+  }
+  #left img:hover{
+    width: 32vw;
+    height: 450px;
+  }
 }
 
-#right #elem {
-  margin: 15px 0 10px 20px;
-  line-height: 2;
+#right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+  padding: 10px;
+  margin-top: 20px;
 }
-#right #elem input {
-  padding: 15px;
-  width: 80%;
-  border: 1px solid rgba(128, 128, 128, 0.575);
+#right h1{
+  font-size: 30px;
+  color: red;
 }
-#right #elem #category {
-  padding: 15px;
-  width: 87%;
-  border: 1px solid rgba(128, 128, 128, 0.575);
-}
-#right #elem h3 {
-  font-size: 15px;
-}
-#right button {
-  margin: 15px 0 10px 20px;
-  width: 85%;
-  padding: 15px;
-  background-color: rgb(81, 198, 228);
-  color: rgb(0, 0, 0);
-  border: none;
-  font-weight: 600;
-}
-
-/* -----> Section 2 <----- */
-
-.section2{
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  background-color: rgba(0, 0, 0, 0.767);
-}
-.section2 img{
-  height: 100%;
-  width: 100%;
-  opacity: 0.25;
-}
-
-#kaam{
-  position: absolute;
-  left: 0;
-  top: 0;
-  /* border: 1px solid black; */
-  width: 65%;
-  margin: 20px 30px;
-}
-#kaam h1{
-  color: white;
-  font-size: 3.5vw;
-  font-weight: 100;
-}
-#kaam img{
-  position: absolute;
-}
-
-.section2 button{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 20px 7vw 20px 7vw;
-  background-color: rgb(81, 198, 228);
-  border: none;
-  font-weight: 100;
+#right h2{
   font-size: 20px;
+  font-weight: 100;
 }
-.section2 button:hover{
-  background-color: rgb(143, 220, 240);
+#right h3{
+  font-size: 20px;
+  font-weight: 100;
+}
+strong{
+  color: blue;
+}
+#right button{
+  padding: 10px;
+  margin: 2vw 15vw;
+  background-color: rgb(139, 197, 216);
+  border: 1px solid rgb(79, 151, 175);
+  font-weight: 600;
 }
