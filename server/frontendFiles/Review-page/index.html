@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Review Form</title>
+</head>
+
+<body>
+    <div id="main">
+        <header class="head">
+            <!-- <a href="" class="logo">logo</a> -->
+            <img src="logo.png" alt="">
+
+            <nav class="nav-bar">
+                <ul class="listitems">
+                    <li class="list-element"><a href="">Home</a></li>
+                    <li class="list-element"><a href="">Add book</a></li>
+                    <li class="list-element"><a href="">search</a></li>
+                    <li class="list-element"><a href="">serviecs</a></li>
+                    <li class="list-element"><a href="">about</a></li>
+                    <li class="list-element"><a href="">Contact</a></li>
+                    <li class="login-btn"><button><a href="/login-page">login</a></button></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-navbar-btn">
+                <ion-icon class="mobile-nav-icon" name="menu"></ion-icon>
+                <ion-icon class="mobile-nav-icon" name="close"></ion-icon>
+            </div>
+        </header>
+
+        <div id="form">
+            <div id="content">
+                <h1>REVIEW FORM</h1>
+                <hr>
+                <form action="https://httpbin.org/get">
+                    <div id="elem">
+                        <h2>A. Author Credibility :</h2>
+                        1. Numbers of Authors (2 score for each author maximum of 10) : <input type="number" min="0" max="10" step="1">
+                        <br>
+                        2. Qualification (Out of 5): <input type="number" min="0" max="5" step="1">
+                        <br>
+                        3. Experience (1 score for each year) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        4. Expetise (Out of 30): <input type="number" min="0" max="30" step="1">
+                        <br>
+                    </div>
+
+                    <div id="elem">
+                        <h2>B. Publisher Credibility (Out of 20): <input type="number" min="0" max="20" step="1"></h2>
+                    </div>
+
+                    <div id="elem">
+                        <h2>C. In General :</h2>
+                        1. Uniqueness of the book (Out of 5) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        2. Convey of Uniqueness (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        3. Focus on the uniqueness (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        4. Focus on entire curriculum & syllabus (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                    </div>
+                    
+                    <div id="elem">
+                        <h2>D. Physical Appearance, Structure & Organisation :</h2>
+                        1. Attractiveness of Cover page (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        2. Relevance of cover page design (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        3. Size of the Book (Out of 10) : <input type="number" min="0" max="10" step="1">
+                        <br>
+                        4. Paper quality: (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        5. Colours in Printing (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        6. Logical & Consistent page layout (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        7. Font Type and Size (0-30 score) : <input type="number" min="0" max="30" step="1">
+                        <br>
+                        8. Number pages to the teaching hours (0-15 score) : <input type="number" min="0" max="15" step="1">
+                        <br>
+                        9. An overview at the beginning of the chapter (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        10. Is there an introductory section (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        11. Table of contentsis well structured (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        12. Book provide the list of Abbreviations (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        13. Summary of the chapter (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        14. Well structured format (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        15. Content is meaningful (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        16. Is distribution of topic good (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        17. Key words and concepts are identified and highlighted (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        18. Free from the mistakes and reiteration (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                    </div>
+
+                    <div id="elem">
+                        <h2>E. Subject Matter :</h2>
+                        1. Compilation of classical references (0-15 score) : <input type="number" min="0" max="15" step="1">
+                        <br>
+                        2. The concepts are clear, comprehensive and self-explanatory (0-20 score) : <input type="number" min="0" max="20" step="1">
+                        <br>
+                        3. Consistency of content (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                        4. Understandable to all types of learners : (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        5. Is the matter facilitating students (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        6. Is the content promoting Higher-order thinking skills (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        7. Content is with well-formed presentation, discussion and conclusion (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        8. Content reveals clear meaning & thought provoking (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        9. Content is focussed only on main idea (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        10. Definitions explained well with suitable examples (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        11. There are multiple perspectives and viewpoints on issues (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        12. There is no bias in content (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        13. The content and illustrations do not carry any form of discrimination (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        14. Included appropriate resources (0-3 score) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        15. Bibliography, References & Citations (0-5 score) : <input type="number" min="0" max="5" step="1">
+                        <br>
+                    </div>
+
+                    <div id="elem">
+                        <h2>F. Language :</h2>
+                        1. Is the language used in the text is simple (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        2. Usage of Standard Technical Terminology (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        3. Usage of Standard Punctuation Marks & Symbols (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        4. The language is accurate and precise (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        5. Can the audience determine meanings of difficult or technical terms through context clues (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        6. Is the text free from Grammatical mistakes, redundancies, wordiness, highfalutin and sexist language (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        7. Is the text free from fragments, run-on, and overly complex sentences (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                        8. Are capitalization, spelling, and paragraphs used correctly (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                    </div>
+
+                    <div id="elem">
+                        <h2>G. Illustrations :</h2>
+                        1. Colour (5 for black and white and 10 for colour) : <input type="number" min="0" max="10" step="1">
+                        <br>
+                        2. Visibility of illustrations (Out of 15) : <input type="number" min="0" max="15" step="1">
+                        <br>
+                        3. Relevance to the content (Out of 3) : <input type="number" min="0" max="3" step="1">
+                        <br>
+                    </div>
+                    <hr>
+
+                    <button type="submit" id="submit-btn">SUBMIT</button>
+
+                </form>
+                <!-- <button type="submit" id="submit-btn">SUBMIT</button> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>

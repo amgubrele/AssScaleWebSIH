@@ -1,0 +1,237 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200&family=Quicksand:wght@300&family=Rubik+Gemstones&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 50px;
+}
+/* html{
+    overflow-x: hidden;
+}
+body
+{
+    overflow-x: hidden;
+} */
+.head{
+    padding:0px 48px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #e7f5ff; */
+    border-bottom: 1px solid black;
+
+}
+
+.head .logo
+{
+    height: 30px;
+}
+
+.listitems
+{
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+    
+}
+.listitems a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 1000;
+    color: black;
+}
+.list-element :hover{
+    border-bottom: 3px solid rgb(75, 105, 160);
+}
+
+.listitems :visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    transition:all 0.3s;
+
+}
+.mobile-navbar-btn
+{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-nav-icon{
+    width: 3rem;
+    height: 3rem;
+    
+}
+.mobile-nav-icon[name="close"]
+{
+    display: none;
+}
+
+
+/*res*/
+
+@media(max-width:62em)
+{
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+    }
+    .head{
+        position: relative;
+    }
+    .head .logo
+    {
+        width: 40%;
+    }
+    .nav-bar
+    {
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background-color: #e7f5ff;
+        position:absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items:center;
+
+
+        transform: translateX(100%); 
+        transition: all 0.5s linear;
+
+         opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+    }
+    .listitems{
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .nav-bar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        
+
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close"]{
+        display: block;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu"]{
+        display: none;
+    }
+    body
+    {
+        overflow-x: hidden;
+    }
+
+
+}
+
+
+.login-btn button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(67, 77, 74,0.2);
+    padding: 5px 5px;
+    margin-top: px;
+    color: rgb(73, 80, 80);
+    font-weight: 500;
+}
+.login-btn:hover{
+    background-color:rgba(59, 68, 65, 0.2) ;
+}
+
+
+.nav-bar ul li {font-family: 'Open Sans', sans-serif;}
+
+#searchbar{
+align-items: center;
+    margin-left: 50%;
+    border-radius:15px ;
+    border-color: black;
+    justify-content: center;
+/* margin-bottom: 30px; */
+}
+
+/* ----> STYLING FOR BOOKS <---- */
+
+#content{
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.493); */
+    gap: 10px;
+}
+
+#filter{
+    width: 280px;
+    /* border-right: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.411);
+    margin: 10px 2px 0px 10px;
+}
+
+#allbooks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aquamarine; */
+    width: 80%;
+    gap: 10px;
+}
+
+#elem{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 10px;
+    border: 0.5px solid gray;
+    width: 90%;
+    padding: 10px;
+}
+#elem .left{
+    /* background-color: rgba(122, 119, 114, 0.452); */
+    width: 40%;
+}
+#elem .left img{
+    height: 25vw;
+    width: 20vw;
+    max-width: 230px;
+    max-height: 250px;
+    padding: 10px;
+}
+
+#elem .right{
+    width: 60%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#elem .right h1{
+    font-size: 3vw;
+    font-weight: 600;
+}
+#elem .right h3{
+    font-weight: 100;
+}
+
+#allbooks #elem:nth-child(3){
+    margin-bottom: 10%;
+}
