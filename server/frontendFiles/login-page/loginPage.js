@@ -37,7 +37,7 @@ btn.addEventListener('click',async(e)=>{
     const passwordValue=inputForUserPassword.value
          
     try{
-        const {data}=await axios.post('/users',{userId:nameValue, password:passwordValue})
+        const {data}=await axios.post('/login/auth',{userId:nameValue, password:passwordValue})
         const h5=document.createElement('h5')
         console.log(data.success)
         if(data.success==false && data.empty==false)
