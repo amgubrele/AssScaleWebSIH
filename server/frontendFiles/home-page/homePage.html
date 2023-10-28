@@ -24,7 +24,7 @@
                 <li class="list-element"><a href="">serviecs</a></li>
                 <li class="list-element"><a href="">about</a></li>
                 <li class="list-element"><a href="">Contact</a></li>
-                <li class="login-btn"><button><a href="/login-page">login</a></button></li>
+                <li class="login-btn"><button><a href="/login">login</a></button></li>
             </ul>
         </nav>
 
@@ -33,7 +33,7 @@
             <ion-icon class="mobile-nav-icon"name="close"></ion-icon>
         </div>
     </header>
-    <div class="result"></div>
+    
 
 
      <!--praut can start from here----------------------------------------------------  -->
@@ -51,10 +51,10 @@
             </div>
 
             <div id="right">
-                <form action="https://httpbin.org/get" method="get">
+                <form action="/book/search" method="post">
                     <div id="elem">
                         <h3>Title</h3>
-                        <input type="text" name="firstName" placeholder="What are you looking for...">
+                        <input type="text" name="bookName" placeholder="What are you looking for...">
                     </div>
 
                     <div id="elem">
@@ -64,22 +64,24 @@
 
                     <div id="elem">
                         <h3>Select Category</h3>
-                        <select name="character" id="category">
+                        <select name="category" id="category">
                             <option value="none" selected>None</option>
-                            <option value="john wick">Ayurveda</option>
-                            <option value="walter white">Siddha</option>
-                            <option value="saul">Unani</option>
+                            <option value="Ayurveda">Ayurveda</option>
+                            <option value="Siddha">Siddha</option>
+                            <option value="Unani">Unani</option>
                         </select>
                     </div>
 
-                    <button>SEARCH</button>
-            </div>
+                    <button  class="searchBtn">SEARCH</button>
+                
+                </form >
 
-        </div>
+            </div> 
+         </div>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="logic.js"></script>
