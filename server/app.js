@@ -94,6 +94,10 @@ app.post('/saving/current/book/serve',(req,res)=>{
 
 
 })
+//for multi page system
+app.post('/saving/current/books/serve',(req,res)=>{
+    return res.json(book)
+})
 
 //===============
 
