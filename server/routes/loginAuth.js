@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const users=require('../datajs/users.js')
 const path=require('path')
-let CcurrentUser="user";
+let CcurrentUser={userId:"user",userType:"student"};
 const loginCredentials = require('../datajs/users.js')
 
 
@@ -15,8 +15,8 @@ router.get('/',(req,res)=>{
 
 //login middle ware code authentficition
 router.post('/auth', (req, res) => {
-    const { userId, password } = req.body;
-    const liveUser = { userId, password };
+    const { userId, password,userType } = req.body;
+    const liveUser = { userId, password,userType };
     console.log(req.body);
     console.log(loginCredentials[0]);
     const user = loginCredentials.find((loginCredentials) => (loginCredentials.userId === liveUser.userId && loginCredentials.password === liveUser.password));
@@ -29,7 +29,7 @@ router.post('/auth', (req, res) => {
         return res.json({ success: false ,empty:false});
     }
 
-    CcurrentUser=userId
+    CcurrentUser={userId,userType}
 
     return res.json({ success: true ,empty:false});
 })
@@ -39,7 +39,8 @@ router.post('/auth', (req, res) => {
 router.post('/home/user',(req,res)=>{
     const {a}=req.body
     const currentUser=CcurrentUser
-    CcurrentUser="user"
+    CcurrentUser={userId:"user",userType:"student"}
+    console.log(currentUser)
     return res.json({currentUser})
     
 })

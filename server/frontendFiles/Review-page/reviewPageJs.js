@@ -22,20 +22,7 @@ mobile_nav.addEventListener("click", () => toggleNavbar());
 
 //puts requests
 
-const fun = async () => {
-  try {
-    const response = await axios.post("/homeUser", { user: "hello" });
-    const { currentUser } = response.data;
-    console.log(currentUser);
 
-    if (currentUser != "user") {
-      action.innerHTML = `<a>Welcome ${currentUser}</a>`;
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-};
-fun();
 
 //-----> LOGIC FOR REVIEW FORM <-----//
 

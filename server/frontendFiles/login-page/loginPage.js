@@ -23,6 +23,7 @@ const btn=document.querySelector('.btn')
 const inputForUserId=document.querySelector('.userId')
 const inputForUserPassword=document.querySelector('.userPassword')
 const error=document.querySelector('.result')
+const type=document.querySelector('.selectOption')
 
 
 
@@ -35,9 +36,11 @@ btn.addEventListener('click',async(e)=>{
     
     const nameValue=inputForUserId.value
     const passwordValue=inputForUserPassword.value
+    const userTypeValue=type.value
+    console.log(userTypeValue)
          
     try{
-        const {data}=await axios.post('/login/auth',{userId:nameValue, password:passwordValue})
+        const {data}=await axios.post('/login/auth',{userId:nameValue, password:passwordValue,userType:userTypeValue})
         const h5=document.createElement('h5')
         console.log(data.success)
         if(data.success==false && data.empty==false)
