@@ -1,13 +1,14 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200&family=Quicksand:wght@300&family=Rubik+Gemstones&display=swap");
@@ -31,11 +32,12 @@ body
 
 .head {
   padding: 0px 48px;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+  background-color: rgba(4, 101, 112, 0.578);
 }
 
 .head .logo {
@@ -52,6 +54,7 @@ body
   font-size: 1.1em;
   font-weight: 1000;
   color: black;
+  font-weight: 100;
 }
 .list-element :hover {
   border-bottom: 3px solid rgb(75, 105, 160);
@@ -150,64 +153,103 @@ body
   font-family: "Open Sans", sans-serif;
 }
 
-#content{
+#content {
   display: flex;
+  gap: 50px;
+  /* background: url(https://th.bing.com/th/id/R.3bb96d96ad182ee37c2685434fa86e64?rik=RixckfbxOK2Fdg&riu=http%3a%2f%2fclipart-library.com%2fimg1%2f1368377.jpg&ehk=nRkCuWHuhW%2bFBDfi9YEXvEBVIcDVCZVF8BpsqDIeWP4%3d&risl=&pid=ImgRaw&r=0); */
+  height: 91.9vh;
+  background-color: white;
 }
 
-#left{
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  /* backdrop-filter: blur(2px) brightness(0.8); */
+}
+
+#left {
   margin-left: 3vw;
   width: 40%;
+  /* border: 1px solid black; */
+  height: 40vw;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  /* background-color: grey; */
+  padding-right: 40px;
 }
-#left img{
+#left img {
   height: 35vw;
   width: 30vw;
   max-height: 1000px;
-  margin: 50px 20px 0px 0px;
-  box-shadow: 8px 10px 10px rgba(0,0,0,0.4);
+  margin: 50px 10px 0px 0px;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4);
   transition: all ease 0.3s;
+  margin-left: 40px;
+  margin-top: 10px;
 }
-#left img:hover{
+#left img:hover {
   height: 37vw;
   width: 32vw;
 }
-@media (min-width:1200px){
-  #left img{
+@media (min-width: 1500px) {
+  #left img {
     height: 450px;
     width: 400px;
   }
-  #left img:hover{
+  #left img:hover {
     width: 32vw;
     height: 450px;
   }
 }
 
-#right{
+#right {
   display: flex;
   flex-direction: column;
   width: 50%;
-  gap: 15px;
-  padding: 10px;
-  margin-top: 20px;
+  gap:5px;
+  padding: 30px 10px;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.333);
+  height: 53vh;
+  margin-right: 10px;
+  margin-left: -100px;
+  
 }
-#right h1{
+#right h1 {
   font-size: 30px;
   color: red;
 }
-#right h2{
+#right h2 {
   font-size: 20px;
   font-weight: 100;
 }
-#right h3{
+#right h3 {
   font-size: 20px;
   font-weight: 100;
 }
-strong{
-  color: blue;
+strong {
+  color: rgb(4, 100, 139);
 }
-#right button{
-  padding: 10px;
+
+.review {
+  pointer-events: none;
+}
+
+.review #butt {
+  padding: 20px 5vw;
   margin: 2vw 15vw;
-  background-color: rgb(139, 197, 216);
-  border: 1px solid rgb(79, 151, 175);
-  font-weight: 600;
+  pointer-events: all;
+  cursor: pointer;
+  border: 1px solid skyblue;
+  transition: all ease 0.3s;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.358);
+}
+.review #butt:hover {
+  background-color: rgba(135, 207, 235, 0.61);
+  border: 0.5px solid grey;
 }
