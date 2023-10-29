@@ -13,7 +13,7 @@ let book=[
     {
         name:"health management",
         author:"Dr. Mohapatra ",
-        des:"book about aditya",
+        des:"The health management system (HMS) is an evolutionary medicine regulative process proposed by Nicholas Humphrey in which actuarial assessment of fitness and economic-type cost–benefit analysis determine the body's regulation of its physiology and health.",
         price:"45rs",
         isRated:false,
         rating:false,
@@ -22,13 +22,47 @@ let book=[
 
     },
     {
-        name:"book3",
+        name:"Pharmacology",
         author:"aman",
         des:"book about ayush",
         price:"4rs",
         isRated:false,
-        rating:false
+        rating:false,
+        publisher:"Paras Medical Books",
+        link:"https://parasredkart.com/catalog/9788194914815.jpg"
 
-    }]
+    },
+    {
+        name:"Pharmacology",
+        author:"aman",
+        des:"book about ayush",
+        price:"4rs",
+        isRated:false,
+        rating:false,
+        publisher:"Paras Medical Books",
+        link:"https://parasredkart.com/catalog/9788194914815.jpg"
+
+    },{
+        name:"Pharmacology",
+        author:"aman",
+        des:"book about ayush",
+        price:"4rs",
+        isRated:false,
+        rating:false,
+        publisher:"Paras Medical Books",
+        link:"https://parasredkart.com/catalog/9788194914815.jpg"
+
+    },{
+        name:"Pharmacology",
+        author:"aman",
+        des:"book about ayush",
+        price:"4rs",
+        isRated:false,
+        rating:false,
+        publisher:"Paras Medical Books",
+        link:"https://parasredkart.com/catalog/9788194914815.jpg"
+
+    }
+     ]
 
     module.exports=book;
