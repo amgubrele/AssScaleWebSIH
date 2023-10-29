@@ -51,15 +51,15 @@
             </div>
 
             <div id="right">
-                <form action="/book/search" method="post">
+                <form action="/singleBookServe" method="get">
                     <div id="elem">
                         <h3>Title</h3>
-                        <input type="text" name="bookName" placeholder="What are you looking for...">
+                        <input type="text" class="bookName" name="bookName" placeholder="What are you looking for...">
                     </div>
 
                     <div id="elem">
                         <h3>Author's Name</h3>
-                        <input type="text" name="Author" placeholder="Name">
+                        <input type="text" name="Author" class="author" placeholder="Name">
                     </div>
 
                     <div id="elem">
@@ -87,7 +87,7 @@
         <div id="kaam">
             <h1>Please spare a few moments to share about your views...</h1>
         </div>
-        <button>REVIEW</button>
+        <a href="/multiBook"><button >REVIEW</button></a>
     </div>
 </div>
 

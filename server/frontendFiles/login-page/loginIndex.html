@@ -14,7 +14,14 @@
             <div class="main">
                 <input type="text" name="userId" placeholder="Username" autocomplete="false" class="user userId">
                 <input type="password" name="password" placeholder="Password" class="user userPassword">
+                <select  class="selectOption"name="category" id="category" style="padding: 10px 70px; margin-top: 10px; background-color: rgb(216, 216, 225);">
+                    <option value="student" selected>Student</option>
+                    <option value="reviewer">Reviewer</option>
+                    <option value="Publisher">Publisher</option>
+                    <option value="author">Author</option>
+                </select>
                 <button type="submit" class="btn">Login</button>
+                
                 <div class="result"></div>
             </div>
         </form>
