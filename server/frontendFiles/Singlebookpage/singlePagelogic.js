@@ -23,16 +23,23 @@
 
 // const bookName=document.querySelector(".bookName");
 // const author=document.querySelector(".author")
-const name=document.querySelector('.bookName')
-const auth=document.querySelector('.author')
+const nam=document.querySelector('.name')
+const aut=document.querySelector('.author')
+const Pub=document.querySelector('.Publisher')
+const dis=document.querySelector('.discription')
+const img=document.querySelector('.image')
+
 const fun = async () => {
     try {
         const response = await axios.post('/saving/current/book/serve', { user: "hello" });
         const book = response.data;
         console.log(book)
 
-       name.innerHTML=`BOOK TITLE: ${book.name}`;
-       auth.innerHTML=`AUTHOR: ${book.author}`
+       nam.innerHTML=`${book.name}`;
+       aut.innerHTML=`${book.author}`
+       Pub.innerHTML=`${book.publisher}`
+       dis.innerHTML=`${book.des}`
+       img.innerHTML=`<img src="${book.link}" alt="">`
        
         
 
