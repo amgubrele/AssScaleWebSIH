@@ -22,7 +22,19 @@ mobile_nav.addEventListener("click", () => toggleNavbar());
 
 //puts requests
 
+const btnEvent = document.querySelector("#submit-btn");
 
+btnEvent.addEventListener("click", () => {
+  btnEvent.innerHTML = `Successfully Submited!`;
+  btnEvent.style.color = "green";
+  btnEvent.style.fontSize = "1.2em";
+  btnEvent.style.backgroundColor = "rgba(0,0,0,0)";
+
+  function recurringFunction() {
+    console.log("This message will appear every 2000 milliseconds (2 seconds).");
+  }
+  
+  const intervalId = setInterval(recurringFunction, 2000);
+});
 
 //-----> LOGIC FOR REVIEW FORM <-----//
-

@@ -12,7 +12,7 @@ let book=[
     },
     {
         name:"health management",
-        author:"Dr. Mohapatra ",
+        author:"Dr. Mohapatra",
         des:"The health management system (HMS) is an evolutionary medicine regulative process proposed by Nicholas Humphrey in which actuarial assessment of fitness and economic-type cost–benefit analysis determine the body's regulation of its physiology and health.",
         price:"45rs",
         isRated:false,
